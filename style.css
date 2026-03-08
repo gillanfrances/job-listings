@@ -31,6 +31,13 @@ main {
     margin-bottom: 4rem;
 }
 
+#filters {
+    background-color: #fff;
+    margin-top: -5rem;
+    color: hsl(180, 8%, 52%);
+    font-weight: 700;
+}
+
 .card {
     display: flex;
     flex-direction: row;
@@ -39,6 +46,8 @@ main {
     width: 100%;
     padding: 2rem;
     border-radius: 0.5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-left: 0.4rem solid #fff;
 }
 
 .feature {
@@ -81,7 +90,7 @@ main {
     display: inline-block;
     background-color: hsl(180, 52%, 96%);
     padding: 0.5rem;
-    color: hsl(180, 14%, 20%);
+    color: hsl(180, 8%, 52%);
     font-weight: 700;
 }
 
@@ -103,10 +112,57 @@ main {
     color: hsl(180, 8%, 52%);
 }
 
+/* RESPONSIVE */
+@media (max-width: 1025px) {
+    main {
+        gap: 4rem;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .tags {
+        width: 100%;
+        align-self: flex-start;
+        border-top: 2px solid hsl(180, 52%, 96%);
+    }
+
+    .icon {
+        margin-top: -4rem;
+    }
+}
+
+@media (max-width: 375px) {
+    #top {
+        background-image: url("images/bg-header-mobile.svg");
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .info {
+        width: 100%;
+    }
+    
+    .info span {
+        line-height: 2rem;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+        margin-top: -3rem;
+    }
+}
 
 .attribution {
     font-size: 11px;
     text-align: center;
+    padding-bottom: 2rem;
 }
 
 .attribution a {
