@@ -1,3 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    min-height: 100vh;
+    font-size: 15px;
+    background-color: hsl(180, 52%, 96%);
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#top {
+    width: 100%;
+    background-image: url("images/bg-header-desktop.svg");
+    background-repeat: repeat-x;
+    height: 150px;
+    background-color: hsl(180, 8%, 52%);
+    margin-bottom: 4rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    justify-content: start;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.feature {
+    border-left: 0.4rem solid hsl(180, 8%, 52%);
+}
+
+.info {
+    padding: 1rem;
+    align-items: center;
+    width: 65%;
+}
+
+.tags {
+    padding: 1rem;
+    align-self: center;
+    justify-content: end;
+}
+
+.category {
+    color: hsl(180, 14%, 20%);
+}
+
+.pill-new {
+    color: #fff;
+    background-color: hsl(180, 8%, 52%);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    text-transform: uppercase;
+}
+
+.pill-featured {
+    color: #fff;
+    background-color: hsl(180, 14%, 20%);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    text-transform: uppercase;
+}
+
+.tag {
+    display: inline-block;
+    background-color: hsl(180, 52%, 96%);
+    padding: 0.5rem;
+    color: hsl(180, 14%, 20%);
+    font-weight: 700;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.role {
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.time {
+    color: hsl(180, 8%, 52%);
+}
+
+
 .attribution {
     font-size: 11px;
     text-align: center;

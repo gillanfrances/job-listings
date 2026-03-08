@@ -7,49 +7,50 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Job Listings</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Item Start -->
-  Photosnap
-  New!
-  Featured
-  Senior Frontend Developer
-  1d ago
-  Full Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Senior
-  <!-- Languages -->
-  HTML
-  CSS
-  JavaScript
-  <!-- Item End -->
+  <div id="top">
+  </div>
+  <main>
+    <div class="card feature">
+      <img src="images/photosnap.svg" class="icon" alt="Senior Frontend Developer" />
+      <div class="info">
+        <span class="category">Photosnap</span>
+        <span class="pill-new">New!</span>
+        <span class="pill-featured">Featured</span>
+        <p class="role">Senior Frontend Developer</p> 
+        <p class="time">1d ago &middot; Full Time &middot; USA only</p>
+      </div>
+      <div class="tags">
+        <span class="tag">Frontend</span>
+        <span class="tag">Senior</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+    </div>
 
-  <!-- Item Start -->
-  Manage
-  New!
-  Featured
-  Fullstack Developer
-  1d ago
-  Part Time
-  Remote
-  <!-- Role -->
-  Fullstack
-  <!-- Level -->
-  Midweight
-  <!-- Languages -->
-  Python
-  <!-- Tools -->
-  React
-  <!-- Item End -->
+    <div class="card feature">
+      <img src="images/manage.svg" class="icon" alt="Senior Frontend Developer" />
+      <div class="info">
+        <span class="category">Manage</span>
+        <span class="pill-new">New!</span>
+        <span class="pill-featured">Featured</span>
+        <p class="role">Fullstack Developer</p>
+        <p class="time">1d ago &middot; Part Time &middot; Remote</p>
+      </div>
+      <div class="tags">
+        <span class="tag">Fullstack</span>
+        <span class="tag">Midweight</span>
+        <span class="tag">Python</span>
+        <span class="tag">React</span>
+      </div>
+    </div>
+  
 
   <!-- Item Start -->
   Account
@@ -184,10 +185,16 @@
   React
   Sass
   <!-- Item End -->
+
+    </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+
 </body>
 </html>
