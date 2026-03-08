@@ -16,9 +16,14 @@
   <div id="top">
   </div>
   <main>
-    <div id="filters" display="none;">
+    <section id="filters"
+      style="display: none; padding: 1.5rem; border-radius: 5px; justify-content: space-between; align-items: center;">
+      <div id="filter-tags-container" style="display: flex; gap: 1rem; flex-wrap: wrap;"></div>
+      <button id="clear-filters"
+        style="border: none; background: none; cursor: pointer; color: hsl(180, 8%, 52%);">Clear</button>
+    </section>
 
-    </div>
+    <section id="job-list">
     <div class="card feature">
       <img src="images/photosnap.svg" class="icon" alt="Senior Frontend Developer" />
       <div class="info">
@@ -180,6 +185,7 @@
         <span class="tag">Sass</span>
       </div>
     </div>
+  </section>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

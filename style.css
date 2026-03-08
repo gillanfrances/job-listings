@@ -31,18 +31,11 @@ main {
     margin-bottom: 4rem;
 }
 
-#filters {
-    background-color: #fff;
-    margin-top: -5rem;
-    color: hsl(180, 8%, 52%);
-    font-weight: 700;
-}
-
 .card {
     display: flex;
     flex-direction: row;
     background-color: #fff;
-    justify-content: start;
+    justify-content: stretch;
     width: 100%;
     padding: 2rem;
     border-radius: 0.5rem;
@@ -57,13 +50,27 @@ main {
 .info {
     padding: 1rem;
     align-items: center;
-    width: 65%;
+    width: 56%;
 }
 
 .tags {
-    padding: 1rem;
-    align-self: center;
-    justify-content: end;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.tag {
+    background-color: hsl(180, 52%, 96%);
+    color: hsl(180, 29%, 50%);
+    padding: 0.6rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background-color: hsl(180, 29%, 50%);
+    color: #fff;
 }
 
 .category {
@@ -86,14 +93,6 @@ main {
     text-transform: uppercase;
 }
 
-.tag {
-    display: inline-block;
-    background-color: hsl(180, 52%, 96%);
-    padding: 0.5rem;
-    color: hsl(180, 8%, 52%);
-    font-weight: 700;
-}
-
 .icon {
     width: 100px;
     height: 100px;
@@ -112,49 +111,141 @@ main {
     color: hsl(180, 8%, 52%);
 }
 
-/* RESPONSIVE */
-@media (max-width: 1025px) {
-    main {
-        gap: 4rem;
+/* Filter Bar */
+#filters {
+    display: none;
+    padding: 1.25rem 2.5rem;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+    font-family: "League Spartan", sans-serif;
+    background-color: #fff;
+    margin-top: -7rem;
+    color: hsl(180, 8%, 52%);
+    font-weight: 700;
+    transition: all 0.8s ease-in-out;
+}
+
+#clear-filters {
+    font-weight: 700;
+    font-family: "League Spartan", sans-serif;
+}
+
+.filter-badge {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    background-color: hsl(180, 52%, 96%);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.filter-badge span {
+    padding: 0 10px;
+}
+
+.remove-filter {
+    background-color: hsl(180, 8%, 52%);
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 700;
+}
+
+.remove-filter:hover {
+    background-color: hsl(180, 14%, 20%);
+    font-weight: 700;
+}
+
+/* Individual Tags */
+.tag {
+    cursor: pointer;
+    margin: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.tag:hover {
+    background-color: hsl(180, 8%, 52%);
+    color: #fff;
+    font-weight: 700;
+}
+
+#clear-filters:hover {
+    text-decoration: underline;
+    color: hsl(180, 8%, 52%);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
 
-    .card {
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-    }
-
-    .tags {
-        width: 100%;
-        align-self: flex-start;
-        border-top: 2px solid hsl(180, 52%, 96%);
-    }
-
-    .icon {
-        margin-top: -4rem;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@media (max-width: 375px) {
-    #top {
-        background-image: url("images/bg-header-mobile.svg");
+#job-list .card {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1025px) {
+    main {
+        gap: 3rem;
+        width: 90%;
     }
 
     .card {
-        padding: 1rem;
+        flex-direction: column;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+        position: relative;
+        margin-top: 2rem;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: -25px;
+        left: 1.5rem;
+        margin-top: 0;
     }
 
     .info {
         width: 100%;
-    }
-    
-    .info span {
-        line-height: 2rem;
+        padding: 0 0 1rem 0;
+        border-bottom: 1px solid hsl(180, 10%, 85%);
     }
 
-    .icon {
-        width: 60px;
-        height: 60px;
+    .tags {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        padding: 1rem 0 0 0;
+        align-self: flex-start;
+    }
+
+    .tag {
+        margin: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .role {
+        font-size: 1.1rem;
+    }
+
+    #filters {
+        padding: 1rem;
         margin-top: -3rem;
     }
 }
@@ -166,5 +257,5 @@ main {
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(180, 14%, 20%);
 }
