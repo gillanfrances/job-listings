@@ -27,7 +27,7 @@ main {
     background-image: url("images/bg-header-desktop.svg");
     background-repeat: repeat-x;
     height: 150px;
-    background-color: hsl(180, 8%, 52%);
+    background-color: hsl(179, 29%, 51%);
     margin-bottom: 4rem;
 }
 
@@ -56,6 +56,7 @@ main {
 .tags {
     justify-content: flex-end;
     margin-left: auto;
+    align-self: center;
 }
 
 .tag {
